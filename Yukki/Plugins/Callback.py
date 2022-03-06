@@ -276,7 +276,7 @@ async def admin_risghts(_, CallbackQuery):
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
-             
+                )
                 raw_path = await convert(downloaded_file)
                 await skip_stream(chat_id, raw_path)
                 theme = await check_theme(chat_id)
