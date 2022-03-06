@@ -272,11 +272,11 @@ async def admin_risghts(_, CallbackQuery):
                     thumbnail,
                 ) = get_yt_info_id(videoid)
                 await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0%  ﮩـ╬━❤️❥❥═━━╬٨ـﮩﮩ٨ـﮩﮩـ╬━❤️❥❥═100%"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
-                )
+             
                 raw_path = await convert(downloaded_file)
                 await skip_stream(chat_id, raw_path)
                 theme = await check_theme(chat_id)
